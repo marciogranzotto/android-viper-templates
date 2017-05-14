@@ -9,4 +9,10 @@ class ${Module_name}Interactor(var output: ${Module_name}Contracts.InteractorOut
     override fun unregister() {
         output = null
     }
+
+    //region Interactor
+
+    //TODO: Implement your Interactor methods here
+
+    //endregion
 }

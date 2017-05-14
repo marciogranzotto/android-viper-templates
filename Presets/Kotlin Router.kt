@@ -5,10 +5,15 @@
 
 import android.app.Activity
 
-
 class ${Module_name}Router(var activity: Activity?) : ${Module_name}Contracts.Router {
 
     override fun unregister() {
         activity = null
     }
+
+    //region Router
+
+    //TODO: Implement your Router methods here
+
+    //endregion
 }

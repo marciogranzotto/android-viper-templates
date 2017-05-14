@@ -5,6 +5,7 @@
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 
 class ${Module_name}Fragment: BaseFragment(), ${Module_name}Contracts.View {
@@ -36,4 +37,10 @@ class ${Module_name}Fragment: BaseFragment(), ${Module_name}Contracts.View {
         super.onViewCreated(view, savedInstanceState)
         presenter?.onCreate()
     }
+
+    //region View
+
+    //TODO: Implement your View methods here
+
+    //endregion
 }

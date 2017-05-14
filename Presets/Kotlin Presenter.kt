@@ -3,6 +3,8 @@
 #end
 #parse("File Header.java")
 
+import android.app.Activity
+import android.content.Intent
 
 class ${Module_name}Presenter(var view: ${Module_name}Contracts.View?): ${Module_name}Contracts.Presenter, ${Module_name}Contracts.InteractorOutput {
 
@@ -30,6 +32,12 @@ class ${Module_name}Presenter(var view: ${Module_name}Contracts.View?): ${Module
         router?.unregister()
         router = null
     }
+
+    //endregion
+
+    //region Presenter
+
+    //TODO: Implement your Presenter methods here
 
     //endregion
 }

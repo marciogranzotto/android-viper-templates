@@ -35,4 +35,10 @@ class ${Module_name}Activity : BaseActivity(), ${Module_name}Contracts.View { //
     }
 
     //endregion
+
+    //region View
+
+    //TODO: Implement your View methods here
+
+    //endregion
 }
