@@ -40,4 +40,10 @@ class ${Module_name}Presenter(var view: ${Module_name}Contracts.View?): ${Module
     //TODO: Implement your Presenter methods here
 
     //endregion
+
+    //region InteractorOutput
+
+    //TODO: Implement your InteractorOutput methods here
+
+    //endregion
 }
