@@ -13,6 +13,9 @@ On the folder `Presets` there are files for each kind of file that a VIPER modul
 This is how it will look like:<br>
 ![Android Studio Templates](http://i.imgur.com/wztAC9T.png)
 
+<br>Then you can just create your files using the `New` menu:<br>
+![New Files](http://i.imgur.com/4CEG3BE.png)
+
 ## Base Module
 There's also a basic Base VIPER Module that your files can extend. This files add some common functionalities that can be used on your project
 <br>This files are on the `Base` folder.
