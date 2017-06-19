@@ -15,7 +15,7 @@ class ${Module_name}Activity : BaseActivity(), ${Module_name}Contracts.View { //
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.) //TODO create the layout and add it here
-        presenter?.onCreate(intent)
+        presenter?.onCreate(intent.extras)
     }
 
     override fun onResume() {

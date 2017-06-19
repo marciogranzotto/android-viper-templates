@@ -1,7 +1,7 @@
 //TODO add you package here
 
 import android.content.Context
-import android.content.Intent
+import android.os.Bundle
 
 interface BaseContracts {
 
@@ -11,7 +11,7 @@ interface BaseContracts {
     }
 
     interface Presenter {
-        fun onCreate(intent: Intent? = null) {}
+        fun onCreate(bundle: Bundle? = null) {}
         fun onResume() {}
         fun onPause() {}
         fun onDestroy()
