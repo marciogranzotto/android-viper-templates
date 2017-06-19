@@ -4,7 +4,7 @@
 #parse("File Header.java")
 
 import android.app.Activity
-import android.content.Intent
+import android.os.Bundle
 
 class ${Module_name}Presenter(var view: ${Module_name}Contracts.View?): ${Module_name}Contracts.Presenter, ${Module_name}Contracts.InteractorOutput {
 
@@ -13,14 +13,14 @@ class ${Module_name}Presenter(var view: ${Module_name}Contracts.View?): ${Module
 
     //region Lifecycle
 
-    override fun onCreate(intent: Intent?) {
-        super.onCreate(intent)
+    override fun onCreate(bundle: Bundle?) {
+        super.onCreate(bundle)
 
         //the view can be a activity or a fragment, that's why this getActivityContext method is needed
         val activity = view?.getActivityContext() as? Activity ?: return
         router = ${Module_name}Router(activity)
 
-        if (intent != null) { //you can delete this if there's no need to get extras from the intent
+        if (bundle != null) { //you can delete this if there's no need to get extras from the intent
             //TODO: Do something
         }
     }
