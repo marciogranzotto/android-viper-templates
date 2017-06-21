@@ -1,0 +1,40 @@
+<template format="4"
+        revision="1"
+        name="Viper Template"
+        description="Creates new Viper classes - Activity, Contracts, CustomView, Fragment, Interactor, Presenter and Router">
+
+    <category value="Viper Module"/>
+
+    <parameter
+        id="name"
+        name="Module Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="CustomViper"
+        help="The name of the module that requires Viper"/>
+
+    <parameter
+        id="generateCustomView"
+        name="Generate CustomView File"
+        type="boolean"
+        default="false"
+        help="If true, a CustomView file will be generated" />
+
+    <parameter
+        id="generateActivity"
+        name="Generate Activity File"
+        type="boolean"
+        default="false"
+        help="If true, a Activity file will be generated" />
+
+    <parameter
+        id="generateFragment"
+        name="Generate Fragment File"
+        type="boolean"
+        default="false"
+        help="If true, a Fragment file will be generated" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>

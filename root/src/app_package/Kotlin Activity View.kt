@@ -1,14 +1,8 @@
-#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}
+package ${packageName}
 
-#end
-#parse("File Header.java")
+class ${name}Activity : BaseActivity(), ${name}Contracts.View { //TODO: DON'T FORGET TO ADD THIS ACTIVITY TO THE MANIFEST FILE!!!
 
-import android.os.Bundle
-
-
-class ${Module_name}Activity : BaseActivity(), ${Module_name}Contracts.View { //TODO: DON'T FORGET TO ADD THIS ACTIVITY TO THE MANIFEST FILE!!!
-
-    var presenter: ${Module_name}Contracts.Presenter? = ${Module_name}Presenter(this)
+    var presenter: ${name}Contracts.Presenter? = ${name}Presenter(this)
 
     //region Lifecycle
 

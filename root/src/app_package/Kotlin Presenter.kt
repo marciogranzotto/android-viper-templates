@@ -1,15 +1,12 @@
-#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}
-
-#end
-#parse("File Header.java")
+package ${packageName}
 
 import android.app.Activity
 import android.os.Bundle
 
-class ${Module_name}Presenter(var view: ${Module_name}Contracts.View?): ${Module_name}Contracts.Presenter, ${Module_name}Contracts.InteractorOutput {
+class ${name}Presenter(var view: ${name}Contracts.View?): ${name}Contracts.Presenter, ${name}Contracts.InteractorOutput {
 
-    var interactor: ${Module_name}Contracts.Interactor? = ${Module_name}Interactor(this)
-    var router: ${Module_name}Contracts.Router? = null
+    var interactor: ${name}Contracts.Interactor? = ${name}Interactor(this)
+    var router: ${name}Contracts.Router? = null
 
     //region Lifecycle
 
@@ -18,7 +15,7 @@ class ${Module_name}Presenter(var view: ${Module_name}Contracts.View?): ${Module
 
         //the view can be a activity or a fragment, that's why this getActivityContext method is needed
         val activity = view?.getActivityContext() as? Activity ?: return
-        router = ${Module_name}Router(activity)
+        router = ${name}Router(activity)
 
         if (bundle != null) { //you can delete this if there's no need to get extras from the intent
             //TODO: Do something
