@@ -1,16 +1,13 @@
-#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}
-
-#end
-#parse("File Header.java")
+package ${packageName}
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class ${Module_name}Fragment: BaseFragment(), ${Module_name}Contracts.View {
+class ${name}Fragment: BaseFragment(), ${name}Contracts.View {
 
-    var presenter: ${Module_name}Contracts.Presenter? = ${Module_name}Presenter(this)
+    var presenter: ${name}Contracts.Presenter? = ${name}Presenter(this)
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         //TODO: Inflate the layout for this fragment

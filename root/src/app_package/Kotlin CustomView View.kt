@@ -1,7 +1,4 @@
-#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}
-
-#end
-#parse("File Header.java")
+package ${packageName}
 
 import android.annotation.TargetApi
 import android.content.Context
@@ -10,9 +7,9 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 
 
-class ${Module_name}View : BaseViewGroup(), ${Module_name}Contracts.View {
+class ${name}View : BaseViewGroup(), ${name}Contracts.View {
 
-    var presenter: ${Module_name}Contracts.Presenter? = ${Module_name}Presenter(this)
+    var presenter: ${name}Contracts.Presenter? = ${name}Presenter(this)
 
     //region Lifecycle
 
