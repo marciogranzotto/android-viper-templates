@@ -1,5 +1,7 @@
 package ${packageName}
 
+import android.os.Bundle
+
 class ${name}Activity : BaseActivity(), ${name}Contracts.View { //TODO: DON'T FORGET TO ADD THIS ACTIVITY TO THE MANIFEST FILE!!!
 
     var presenter: ${name}Contracts.Presenter? = ${name}Presenter(this)
