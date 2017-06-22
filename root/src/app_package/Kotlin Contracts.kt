@@ -1,8 +1,6 @@
-#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}
+package ${packageName}
 
-#end
-#parse("File Header.java")
-object ${Module_name}Contracts {
+object ${name}Contracts {
 
     interface View: BaseContracts.View {
         //TODO
