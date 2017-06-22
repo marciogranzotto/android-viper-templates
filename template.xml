@@ -14,25 +14,49 @@
         help="The name of the module that requires Viper"/>
 
     <parameter
-        id="generateCustomView"
-        name="Generate CustomView File"
-        type="boolean"
-        default="false"
-        help="If true, a CustomView file will be generated" />
+          id="viewType"
+          name="View Type"
+          type="enum"
+          default="activity">
+          <option id="activity">Activity</option>
+          <option id="fragment" >Fragment</option>
+          <option id="custom" >Custom View</option>
+    </parameter>
 
     <parameter
-        id="generateActivity"
-        name="Generate Activity File"
+        id="generateContracts"
+        name="Generate Contracts File"
         type="boolean"
-        default="false"
-        help="If true, a Activity file will be generated" />
+        default="true"
+        help="If true, a Contracts file will be generated" />
 
     <parameter
-        id="generateFragment"
-        name="Generate Fragment File"
+        id="generateInteractor"
+        name="Generate Interactor File"
         type="boolean"
-        default="false"
-        help="If true, a Fragment file will be generated" />
+        default="true"
+        help="If true, a Interactor file will be generated" />
+
+    <parameter
+        id="generatePresenter"
+        name="Generate Presenter File"
+        type="boolean"
+        default="true"
+        help="If true, a Presenter file will be generated" />
+
+    <parameter
+        id="generateRouter"
+        name="Generate Router File"
+        type="boolean"
+        default="true"
+        help="If true, a Router file will be generated" />
+
+
+      <!-- 128x128 thumbnails relative to template.xml -->
+      <thumbs>
+          <!-- default thumbnail is required -->
+          <thumb>template_thumb.png</thumb>
+      </thumbs>
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />

@@ -1,29 +1,39 @@
 <?xml version="1.0"?>
 <recipe>
 
-    <instantiate from="src/app_package/Kotlin Contracts.kt"
-                   to="${escapeXmlAttribute(srcOut)}/${name}Contracts.kt" />
+    <#if generateContracts>
+      <instantiate from="src/app_package/Kotlin Contracts.kt"
+                    to="${escapeXmlAttribute(srcOut)}/${name}Contracts.kt" />
+    </#if>
 
-    <instantiate from="src/app_package/Kotlin Interactor.kt"
+
+    <#if generateInteractor>
+      <instantiate from="src/app_package/Kotlin Interactor.kt"
                   to="${escapeXmlAttribute(srcOut)}/${name}Interactor.kt" />
+    </#if>
 
-    <instantiate from="src/app_package/Kotlin Presenter.kt"
+
+    <#if generatePresenter>
+      <instantiate from="src/app_package/Kotlin Presenter.kt"
                   to="${escapeXmlAttribute(srcOut)}/${name}Presenter.kt" />
+    </#if>
 
-    <instantiate from="src/app_package/Kotlin Router.kt"
+    <#if generateRouter>
+      <instantiate from="src/app_package/Kotlin Router.kt"
                   to="${escapeXmlAttribute(srcOut)}/${name}Router.kt" />
+    </#if>
 
-    <#if generateCustomView>
+    <#if viewType='custom'>
       <instantiate from="src/app_package/Kotlin CustomView.kt"
                      to="${escapeXmlAttribute(srcOut)}/${name}CustomView.kt" />
     </#if>
 
-    <#if generateActivity>
+    <#if viewType='activity'>
       <instantiate from="src/app_package/Kotlin Activity View.kt"
                      to="${escapeXmlAttribute(srcOut)}/${name}Activity.kt" />
     </#if>
 
-    <#if generateFragment>
+    <#if viewType='fragment'>
       <instantiate from="src/app_package/Kotlin Fragment View.kt"
                      to="${escapeXmlAttribute(srcOut)}/${name}Fragment.kt" />
     </#if>
