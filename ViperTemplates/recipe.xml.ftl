@@ -24,8 +24,8 @@
     </#if>
 
     <#if viewType='custom'>
-      <instantiate from="src/app_package/Kotlin CustomView.kt"
-                     to="${escapeXmlAttribute(srcOut)}/${name}CustomView.kt" />
+      <instantiate from="src/app_package/Kotlin CustomView View.kt"
+                     to="${escapeXmlAttribute(srcOut)}/${name}View.kt" />
     </#if>
 
     <#if viewType='activity'>

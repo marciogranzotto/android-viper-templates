@@ -19,8 +19,9 @@
           type="enum"
           default="activity">
           <option id="activity">Activity</option>
-          <option id="fragment" >Fragment</option>
-          <option id="custom" >Custom View</option>
+          <option id="fragment">Fragment</option>
+          <option id="custom">Custom View</option>
+          <option id="none">None</option>
     </parameter>
 
     <parameter
@@ -51,14 +52,11 @@
         default="true"
         help="If true, a Router file will be generated" />
 
-
-      <!-- 128x128 thumbnails relative to template.xml -->
       <thumbs>
-          <!-- default thumbnail is required -->
           <thumb>template_thumb.png</thumb>
       </thumbs>
 
-    <globals file="globals.xml.ftl" />
+      <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
 
 </template>
