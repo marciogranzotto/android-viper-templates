@@ -7,7 +7,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 
 
-class ${name}View : BaseViewGroup(), ${name}Contracts.View {
+class ${name}View : BaseViewGroup, ${name}Contracts.View {
 
     var presenter: ${name}Contracts.Presenter? = ${name}Presenter(this)
 
@@ -22,16 +22,6 @@ class ${name}View : BaseViewGroup(), ${name}Contracts.View {
     }
 
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int): super(context, attrs, defStyleAttr) {
-        setup(context, attrs)
-    }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int): super(context, attrs, defStyleAttr, defStyleRes) {
-        setup(context, attrs)
-    }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int): super(context, attrs, defStyleAttr) {
         setup(context, attrs)
     }
 
