@@ -35,15 +35,15 @@ class ${name}View : BaseViewGroup, ${name}Contracts.View {
 
     //The parent activity or fragment should call onResume, onPause and onDestroy of this view
 
-    fun onResume() {
+    override fun onResume() {
         presenter?.onResume()
     }
 
-    fun onPause() {
+    override fun onPause() {
         presenter?.onPause()
     }
 
-    fun onDestroy() {
+    override fun onDestroy() {
         presenter?.onDestroy()
         presenter = null
     }
