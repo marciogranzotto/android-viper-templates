@@ -16,12 +16,6 @@ abstract class BaseViewGroup: FrameLayout, BaseContracts.View {
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int):
             super(context, attrs, defStyleAttr)
 
-    open fun onResume() {}
-
-    open fun onPause() {}
-
-    open fun onDestroy() {}
-
     fun getBaseActivity(): BaseActivity? {
         var context = context
         while (context is ContextWrapper) {
