@@ -17,7 +17,7 @@ class ${name}Presenter(var view: ${name}Contracts.View?): ${name}Contracts.Prese
         val activity = view?.getActivityContext() as? Activity ?: return
         router = ${name}Router(activity)
 
-        if (bundle != null) { //you can delete this if there's no need to get extras from the intent
+        bundle?.let { //you can delete this if there's no need to get extras from the intent
             //TODO: Do something
         }
     }
