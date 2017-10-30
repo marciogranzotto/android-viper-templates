@@ -5,7 +5,7 @@ Templates for creating VIPER Kotlin files on Android Studio
 [Here's an Article](https://cheesecakelabs.com/blog/using-viper-architecture-android/) that I've wrote about this subject, feel free to drop some comments!
 
 ## Template
-To add the template to your Android studio you can clone this reposetory and run:
+To add the template to your Android studio you can clone this repository and run:
 `$ ./moveToAndroidStudio.sh`
 on your terminal.2e
 
