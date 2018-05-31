@@ -9,9 +9,9 @@ class ${name}Fragment: BaseFragment(), ${name}Contracts.View {
 
     var presenter: ${name}Contracts.Presenter? = ${name}Presenter(this)
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         //TODO: Inflate the layout for this fragment
-        return inflater?.inflate(R.layout., container, false)
+        return inflater.inflate(R.layout., container, false)
     }
 
     override fun onResume() {
@@ -30,7 +30,7 @@ class ${name}Fragment: BaseFragment(), ${name}Contracts.View {
         presenter = null
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         presenter?.onCreate()
     }
